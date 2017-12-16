@@ -1,0 +1,14 @@
+﻿<div class="container">
+    <h2>@Html.Raw(DateTime.Now.ToString()) {{title}}</h2>
+    <div>        
+        <strong>Resource Filter:</strong>
+        <select ng-model="selectedResourceClass"
+                ng-options="resourceClass.Name for resourceClass in resourceClasses"
+                ng-change="resourceClass_Selected(selectedResourceClass)">
+            <option value="">Please select</option>
+        </select>
+        <div class="gridStyle" ng-grid="gridOptions"></div>
+    </div>
+</div>
+
+
